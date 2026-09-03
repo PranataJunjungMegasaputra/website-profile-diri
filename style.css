@@ -88,6 +88,8 @@ img {
     height: auto; 
     margin: 0; 
     border-radius: 8px; 
+
+    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Efek bayangan */
     transition: transform 0.3s ease; 
 }
@@ -153,4 +155,44 @@ img {
     font-size: 0.9rem;
     margin: 0;
     text-align: center; 
+}
+
+/* 12. Pengaturan Responsif untuk Layar HP (Mobile-friendly) */
+@media screen and (max-width: 768px) {
+    /* Mengecilkan padding utama agar ruang konten lebih lega di HP */
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px; /* Padding dalam kotak diperkecil */
+    }
+
+    /* Menu navigasi berubah menjadi susun ke bawah */
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Foto profil otomatis ke tengah layar */
+    section img {
+        margin: 20px auto; 
+    }
+
+    /* Galeri Portofolio berubah dari 2 kolom menjadi 1 kolom memanjang ke bawah */
+    .portfolio-gallery {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Tombol kontak menjadi memanjang penuh dan tersusun ke bawah */
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-links a {
+        justify-content: center; /* Posisi ikon dan teks ke tengah tombol */
+    }
 }
